@@ -1,0 +1,9 @@
+services:
+  tplus-hr-bot:
+    build: .
+    container_name: tplus-hr-bot
+    restart: unless-stopped
+    environment:
+      - TOKEN=${TOKEN}
+    volumes:
+      - ./storage:/app/storage
